@@ -1,0 +1,46 @@
+Updates
+
+V1.6
+Potential Idler
+
+
+V1.5 
+1st motor: DMN37BA https://uk.rs-online.com/web/p/dc-motors/8814472/
+2nd motor:https://www.amazon.co.uk/Torque-Electric-Reduction-Motor-torque/dp/B07KC7FGJQ/ref=sr_1_8?keywords=30rpm+dc+motor&qid=1581106909&sr=8-8
+
+pulley: 24 and 36
+belt: HTD3/267
+
+1st and 2nd MotorSupport: Remade
+
+V1.4
+
+Added extra motor shaft 8mm and bearing OD22mm BORE 8mm Thickness 7mm for withstanding lateral force from pulley
+
+Added 1 OBF1016 to the flange on guide rod
+
+
+V1.3
+Limit switch holder 
+-changed
+center support plate 
+-length increased to 135mm
+-hole position altered
+nut housing and motor housing 
+-thickened to 5mm/ can be cut out from 50x50 box section
+-holes changed from m1.6 to m2
+-screw m1.6x10 -> m2x10
+motor pulley 
+-changed from 12 to 30 -> for 3000rpm at nut pulley = 100mm/s vertical speed
+distance between motor pulley and nut pulley 
+-changed to 102mm from 80 mm -> belt selection -> HTD3/285
+80w motor
+-corrected cad model
+guide rod
+-main body length increased from 180mm to 200mm
+
+V1.2
+Replaced CABU08Z with CABU10Z
+Replaced OBF081208 with OBF1016
+guide rod 
+-changed from 8mm to 10mm

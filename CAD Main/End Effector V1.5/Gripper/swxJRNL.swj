@@ -1,0 +1,1187 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 12/12/19 by omar abdelhamied
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+
+' Open
+Set Part = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\base.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActivateDoc2 "base.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+
+' Redraw
+Part.GraphicsRedraw2
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 28
+Set myModelView = Part.ActiveView
+myModelView.FrameWidth = 1845
+myModelView.FrameHeight = 833
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("D6@Sketch1@base.SLDPRT", "DIMENSION", 0.02678413515234120967, 0.0156685502846127811, 0.048755348350428801, False, 0, Nothing, 0)
+Part.SketchManager.InsertSketch True
+
+' Open
+Set Part = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\Assem1.SLDASM", 2, 0, "", longstatus, longwarnings)
+Dim swAssembly As Object
+Set swAssembly = Part
+swApp.ActivateDoc2 "Assem1.SLDASM", False, longstatus
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameWidth = 1845
+myModelView.FrameHeight = 833
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusy
+boolstatus = Part.Extension.SelectByRay(-0.0323418411313980414, 0, 0.03403374400548386802, -0.3597893971888497244, 0.9028350622857648222, 0.2354579367486752117, 0.0003929881392034311025, 2, False, 0, 0)
+Part.EditDelete
+Part.ViewRotateplusx
+boolstatus = Part.Extension.SelectByRay(0.02898725214122213623, 0.005999999999999994921, 0.03944392933435360293, -0.5243065660663237537, 0.7616137667924374188, 0.3808504890530854947, 0.0003929881392034311025, 3, False, 0, 0)
+Part.EditDelete
+boolstatus = Part.Extension.SelectByRay(0.0044947936879111694, 0, 0.07296545832798528863, -0.5243065660663237537, 0.7616137667924374188, 0.3808504890530854947, 0.0003929881392034311025, 2, False, 0, 0)
+Part.EditDelete
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+
+' Insert Component
+Dim AssemblyTitle As String
+AssemblyTitle = Part.GetTitle
+Dim tmpObj As ModelDoc2
+Dim errors As Long
+Set tmpObj = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 14t.SLDPRT", 1, 32, "", errors, longwarnings)
+Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)
+Dim swInsertedComponent As Component2
+Set swInsertedComponent = Part.AddComponent5("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 14t.SLDPRT", 0, "", False, "", 0.04471302349702455103, -0.01119787141215056181, 0.04143847874365746975)
+swApp.CloseDoc "Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 14t.SLDPRT"
+Dim TransformData() As Double
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 1
+TransformData(1) = 0
+TransformData(2) = 0
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0
+TransformData(7) = 0
+TransformData(8) = 1
+TransformData(9) = 0.04171302349702454837
+TransformData(10) = -0.01119787141215056181
+TransformData(11) = 0.04143847874365746975
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+Dim TransformDataVariant As Variant
+TransformDataVariant = TransformData
+Dim swMathUtil As Object
+Set swMathUtil = swApp.GetMathUtility()
+Dim swTransform As Object
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+boolstatus = swInsertedComponent.SetTransformAndSolve2(swTransform)
+
+' Insert Component
+AssemblyTitle = Part.GetTitle
+Set tmpObj = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 16t.SLDPRT", 1, 32, "", errors, longwarnings)
+Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)
+Set swInsertedComponent = Part.AddComponent5("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 16t.SLDPRT", 0, "", False, "", 0.0371376152615994215, -0.004941758466884493828, 0.02240296767558902502)
+swApp.CloseDoc "Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 16t.SLDPRT"
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 1
+TransformData(1) = 0
+TransformData(2) = 0
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0
+TransformData(7) = 0
+TransformData(8) = 1
+TransformData(9) = 0.03413761526159941884
+TransformData(10) = -0.004941758466884493828
+TransformData(11) = 0.03392391112182049917
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+boolstatus = swInsertedComponent.SetTransformAndSolve2(swTransform)
+
+' Insert Component
+AssemblyTitle = Part.GetTitle
+Set tmpObj = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 16t - Copy.SLDPRT", 1, 32, "", errors, longwarnings)
+Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)
+Set swInsertedComponent = Part.AddComponent5("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 16t - Copy.SLDPRT", 0, "", False, "", 0.02789945478434674442, 0.002214564359746873379, 0.00915218680165708065)
+swApp.CloseDoc "Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\2.25m 16t - Copy.SLDPRT"
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 1
+TransformData(1) = 0
+TransformData(2) = 0
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0
+TransformData(7) = 0
+TransformData(8) = 1
+TransformData(9) = 0.02489945478434674522
+TransformData(10) = 0.002214564359746873379
+TransformData(11) = 0.02032404673339417017
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+boolstatus = swInsertedComponent.SetTransformAndSolve2(swTransform)
+
+' Insert Component
+AssemblyTitle = Part.GetTitle
+Set tmpObj = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\part1.SLDPRT", 1, 32, "", errors, longwarnings)
+Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)
+Set swInsertedComponent = Part.AddComponent5("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\part1.SLDPRT", 0, "", False, "", 0.03929945478434675177, 0.03519433495297340231, -0.0248752252621943365)
+swApp.CloseDoc "Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\part1.SLDPRT"
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 1
+TransformData(1) = 0
+TransformData(2) = 0
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0
+TransformData(7) = 0
+TransformData(8) = 1
+TransformData(9) = 0.006936419588085718235
+TransformData(10) = 0.02706461352493359437
+TransformData(11) = -0.02787522526219433569
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+boolstatus = swInsertedComponent.SetTransformAndSolve2(swTransform)
+
+' Insert Component
+AssemblyTitle = Part.GetTitle
+Set tmpObj = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\part2.SLDPRT", 1, 32, "", errors, longwarnings)
+Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)
+Set swInsertedComponent = Part.AddComponent5("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\part2.SLDPRT", 0, "", False, "", 0.04209121176972985268, -0.02628518082201480865, 0.01822787162382155657)
+swApp.CloseDoc "Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\part2.SLDPRT"
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 1
+TransformData(1) = 0
+TransformData(2) = 0
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0
+TransformData(7) = 0
+TransformData(8) = 1
+TransformData(9) = 0.02309121176972984621
+TransformData(10) = -0.02628518082201480865
+TransformData(11) = 0.01522787162382155564
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+boolstatus = swInsertedComponent.SetTransformAndSolve2(swTransform)
+
+' Insert Component
+AssemblyTitle = Part.GetTitle
+Set tmpObj = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\TOWER PRO MG-995, ANALOG SERVO.SLDASM", 1, 32, "", errors, longwarnings)
+Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)
+Set swInsertedComponent = Part.AddComponent5("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\TOWER PRO MG-995, ANALOG SERVO.SLDASM", 0, "", False, "", 0.01393885835567527931, 0.05323221855520243045, 0.002030145076576762853)
+swApp.CloseDoc "Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\TOWER PRO MG-995, ANALOG SERVO.SLDASM"
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 1
+TransformData(1) = 0
+TransformData(2) = 0
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0
+TransformData(7) = 0
+TransformData(8) = 1
+TransformData(9) = 0.01412671979999041878
+TransformData(10) = 0.05659832783280363544
+TransformData(11) = 0.008230145076576760033
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+boolstatus = swInsertedComponent.SetTransformAndSolve2(swTransform)
+Part.SetPickMode
+boolstatus = Part.Extension.SelectByRay(0.03045038494894924952, 0.04110958207587600555, -0.02787522526222119268, -0.2338989350997899286, -0.6766608081692613297, 0.6981557411114703848, 0.0003929881392034311025, 2, False, 0, 0)
+Part.OpenCompFile
+
+' Open
+Set Part = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\part1.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActivateDoc2 "part1.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+Set myModelView = Part.ActiveView
+myModelView.FrameWidth = 1845
+myModelView.FrameHeight = 833
+boolstatus = Part.Extension.SelectByID2("Sketch4", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Plane5", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+swApp.ActivateDoc2 "Assem1.SLDASM", False, longstatus
+Set Part = swApp.ActiveDoc
+
+' Zoom In/Out (MouseWheel)
+Dim swModelView As Object
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.707034025132644128
+Dim swTranslation() As Double
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1191289949657810682
+swTranslation(1) = -0.05702591885208727757
+swTranslation(2) = 0.0509625099865796613
+Dim swTranslationVar As Variant
+swTranslationVar = swTranslation
+Dim swMathUtils As Object
+Set swMathUtils = swApp.GetMathUtility()
+Dim swTranslationVector As MathVector
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.056667500159812256
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1203004222274816765
+swTranslation(1) = -0.07452349034367052039
+swTranslation(2) = 0.06140061444166224069
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.477912650794954708
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1217117803741088744
+swTranslation(1) = -0.09560490177931305067
+swTranslation(2) = 0.07397664390561717318
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.985436928668620649
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.123412211876069336
+swTranslation(1) = -0.1210041926656293121
+swTranslation(2) = 0.08912848663327369025
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.59691196225135057
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.125460924529033846
+swTranslation(1) = -0.1516057479503477301
+swTranslation(2) = 0.1073837188352695371
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 4.333628870182350212
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1279292530265813688
+swTranslation(1) = -0.1884750916668759269
+swTranslation(2) = 0.1293779745003247328
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+boolstatus = Part.Extension.SelectByRay(0.01364824702099554088, 0.0745518601241315082, -0.000754155945799084293, -0.2338989350997899286, -0.6766608081692613297, 0.6981557411114703848, 0.0002211317352660934605, 2, True, 1, 0)
+boolstatus = Part.Extension.SelectByRay(0.008130173924342898317, 0.002827903820048049965, 0.0823574879169086671, -0.2338989350997899286, -0.6766608081692613297, 0.6981557411114703848, 0.0002211317352660934605, 2, True, 1, 0)
+
+' Create ConcentricMateFeatureData
+Dim MateData As ConcentricMateFeatureData
+Set MateData = Part.CreateMateData(1)
+
+' Set the Entities To Mate
+Dim EntitiesToMate(1) As Object
+Set EntitiesToMate(0) = Part.SelectionManager.GetSelectedObject6(1, -1)
+Set EntitiesToMate(1) = Part.SelectionManager.GetSelectedObject6(2, -1)
+Dim EntitiesToMateVar As Variant
+EntitiesToMateVar = EntitiesToMate
+MateData.EntitiesToMate = (EntitiesToMateVar)
+
+' Set the Mate Alignment
+MateData.MateAlignment = 1
+
+' Set the Lock Rotation
+MateData.LockRotation = False
+
+' Create the mate
+Dim MateFeature As Feature
+Set MateFeature = Part.CreateMate(MateData)
+Part.ClearSelection2 True
+Part.EditRebuild3
+
+boolstatus = Part.Extension.SelectByID2("Axis3@base-1@Assem1", "AXIS", 0.005849164763463157723, 0.0167424729613574394, 0.06094844709681059014, False, 0, Nothing, 0)
+Part.SetPickMode
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.001850383069154304394, 0.007946467708677573683, 0.06020878859982303766, -0.2338989350997899286, -0.6766608081692613297, 0.6981557411114703848, 0.0002211317352660934605, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.001850383069154304394, 0.007946467708677573683, 0.06020878859982303766, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("TOWER PRO MG-995, ANALOG SERVO-1@Assem1", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.620407987933907501
+TransformData(1) = 0
+TransformData(2) = 0.7842792414107366827
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.7842792414107366827
+TransformData(7) = 0
+TransformData(8) = 0.620407987933907501
+TransformData(9) = -0.001841501061711319593
+TransformData(10) = 0.01251274354601890348
+TransformData(11) = 0.08252962911328202977
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Dim swComp As Object
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.DeSelectByID("", "FACE", 0.001850383069154304394, 0.007946467708677573683, 0.06020878859982303766)
+boolstatus = Part.Extension.SelectByID2("Point11/Block1-1@Sketch1@TOWER PRO MG-995, ANALOG SERVO-1@Assem1", "EXTSKETCHPOINT", 0.005000000000000000104, 0.02488961330097684901, 0, True, 1, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.02060733908243150836, 0.001464390173225638137, 0.08262337594885593717, -0.2338989350997899286, -0.6766608081692613297, 0.6981557411114703848, 0.0002211317352660934605, 2, True, 1, 0)
+
+' Create ConcentricMateFeatureData
+Set MateData = Part.CreateMateData(1)
+
+' Set the Entities To Mate
+Set EntitiesToMate(0) = Part.SelectionManager.GetSelectedObject6(1, -1)
+Set EntitiesToMate(1) = Part.SelectionManager.GetSelectedObject6(2, -1)
+EntitiesToMateVar = EntitiesToMate
+MateData.EntitiesToMate = (EntitiesToMateVar)
+
+' Set the Mate Alignment
+MateData.MateAlignment = 2
+
+' Set the Lock Rotation
+MateData.LockRotation = False
+
+' Create the mate
+Set MateFeature = Part.CreateMate(MateData)
+Part.ClearSelection2 True
+Part.EditRebuild3
+
+boolstatus = Part.Extension.SelectByRay(0.0003159603765539031883, 0.02351274354606402994, 0.06868034360604724498, -0.2338989350997899286, -0.6766608081692613297, 0.6981557411114703848, 0.0002211317352660934605, 2, True, 1, 0)
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 5.221239602629338172
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.09693144180119120379
+swTranslation(1) = -0.2799549216403275365
+swTranslation(2) = 0.3382922070931210778
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 6.290650123649805359
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.05958468128867287078
+swTranslation(1) = -0.3140966520282029717
+swTranslation(2) = 0.4075809724013506052
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 5.242208436374838243
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.06726976269269302477
+swTranslation(1) = -0.2617472100235025412
+swTranslation(2) = 0.3396508103344589302
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 4.368507030312365202
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.07367399719604315889
+swTranslation(1) = -0.218122675019585377
+swTranslation(2) = 0.2830423419453824696
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.640422525260304631
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.07901085928216823595
+swTranslation(1) = -0.1817688958496544993
+swTranslation(2) = 0.2358686182878187154
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.033685437716920674
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.08345824435393912888
+swTranslation(1) = -0.151474079874712092
+swTranslation(2) = 0.1965571819065156101
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.528071198097434191
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.08716439858041490074
+swTranslation(1) = -0.1262283998955934516
+swTranslation(2) = 0.1637976515887630269
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.106725998414528789
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.09025286043581139117
+swTranslation(1) = -0.1051903332463279273
+swTranslation(2) = 0.1364980429906358927
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.755604998678774065
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.09282657864864177211
+swTranslation(1) = -0.08765861103860655978
+swTranslation(2) = 0.1137483691588632301
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.463004165565645165
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.09497134382600044833
+swTranslation(1) = -0.07304884253217219792
+swTranslation(2) = 0.09479030763238602275
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.219170137971371082
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.09675864814046593321
+swTranslation(1) = -0.06087403544347681078
+swTranslation(2) = 0.07899192302698837542
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.015975114976142679
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.09824806840252059414
+swTranslation(1) = -0.05072836286956398932
+swTranslation(2) = 0.06582660252249029897
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+Part.ViewRotateplusx
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.22406640358571428
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.09262891715110697921
+swTranslation(1) = -0.03023402592657300006
+swTranslation(2) = 0.08220769071793282423
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.474778799500860771
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.08585885540241580682
+swTranslation(1) = -0.01725012254200340017
+swTranslation(2) = 0.09904541050353354859
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.776841927109470864
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.07770215450037830374
+swTranslation(1) = -0.001606865452160491413
+swTranslation(2) = 0.1193318198837753502
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+boolstatus = Part.Extension.SelectByRay(-0.03603429442764394253, 0, 0.0963011971689411439, -0.07193178544990304346, 0.2751135647024834374, 0.9587170305980184937, 0.0005393292770964777747, 2, True, 1, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.0003159603765539031883, 0.02351274354606402994, 0.06868034360604724498, -0.07193178544990304346, 0.2751135647024834374, 0.9587170305980184937, 0.0005393292770964777747, 2, True, 1, 0)
+boolstatus = Part.Extension.SelectByRay(-0.03603429442764394253, 0, 0.0963011971689411439, -0.07193178544990304346, 0.2751135647024834374, 0.9587170305980184937, 0.0005393292770964777747, 2, True, 1, 0)
+
+' Create CoincidentMateFeatureData
+Set MateData = Part.CreateMateData(0)
+
+' Set the Entities To Mate
+Set EntitiesToMate(0) = Part.SelectionManager.GetSelectedObject6(1, -1)
+Set EntitiesToMate(1) = Part.SelectionManager.GetSelectedObject6(2, -1)
+EntitiesToMateVar = EntitiesToMate
+MateData.EntitiesToMate = (EntitiesToMateVar)
+
+' Set the Mate Alignment
+MateData.MateAlignment = 1
+
+' Create the mate
+Set MateFeature = Part.CreateMate(MateData)
+Part.ClearSelection2 True
+Part.EditRebuild3
+
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusy
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.1407734061559891
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.01942314169537829455
+swTranslation(1) = -0.01736274793395021013
+swTranslation(2) = 0.08948706217710465649
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.78397783846332425
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.03380181303161422512
+swTranslation(1) = -0.01446895661162516181
+swTranslation(2) = 0.07457255181425385959
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.486648198719436875
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.04578403914514410367
+swTranslation(1) = -0.01205746384302096297
+swTranslation(2) = 0.06214379317854489687
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.238873498932864026
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.05576922757308570844
+swTranslation(1) = -0.0100478865358508019
+swTranslation(2) = 0.05178649431545408882
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.032394582444053466
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.06409021792970373554
+swTranslation(1) = -0.008373238779875674317
+swTranslation(2) = 0.04315541192954507055
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.8603288187033779622
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.07102437656021873269
+swTranslation(1) = -0.006977698983229723394
+swTranslation(2) = 0.03596284327462089675
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.036540745425756693
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.08554148493995963887
+swTranslation(1) = -0.01178248980961020369
+swTranslation(2) = 0.04332872683689265036
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.248844271597297384
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1030319769637439292
+swTranslation(1) = -0.01757139441970717933
+swTranslation(2) = 0.0522032853456537993
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.504631652526864372
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1241048589201105279
+swTranslation(1) = -0.0245459782872938688
+swTranslation(2) = 0.06289552451283590695
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.812809219911885039
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1494938733253714236
+swTranslation(1) = -0.03294909138077183053
+swTranslation(2) = 0.07577774037691074882
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.184107493869741123
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1800830473076134586
+swTranslation(1) = -0.04307332402351635864
+swTranslation(2) = 0.09129848238182018683
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.631454811891254852
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1823911985869828278
+swTranslation(1) = -0.02754798837964941849
+swTranslation(2) = 0.1099981715443616725
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.170427484206330693
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1851721037428494254
+swTranslation(1) = -0.008842764712339860195
+swTranslation(2) = 0.132527917523327321
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.642022903505275799
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1719259480711734789
+swTranslation(1) = -0.007368970593616539465
+swTranslation(2) = 0.1104399312694394203
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.201685752921063166
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1608874850114435651
+swTranslation(1) = -0.006140808828013798355
+swTranslation(2) = 0.09203327605786618126
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.834738127434219379
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1516887657950019563
+swTranslation(1) = -0.005117340690011525084
+swTranslation(2) = 0.07669439671488849364
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.528948439528516001
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1440231664479671714
+swTranslation(1) = -0.004264450575009594117
+swTranslation(2) = 0.06391199726240709422
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+Part.ViewRotateminusx
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.842106553648814815
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1538126670375647431
+swTranslation(1) = 0.01643140605694735565
+swTranslation(2) = 0.07551464171440518125
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.219405486323873244
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1656072460611762165
+swTranslation(1) = 0.007874459623803342634
+swTranslation(2) = 0.09098149604145201741
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.673982513643220926
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1798175822342020502
+swTranslation(1) = -0.002435114392032808068
+swTranslation(2) = 0.1096162602909060563
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.221665679088218326
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1969384691896548523
+swTranslation(1) = -0.01485628790508850515
+swTranslation(2) = 0.1320677834830193131
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.881524914564118856
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.2175660438347787051
+swTranslation(1) = -0.02982155719792662155
+swTranslation(2) = 0.1591178114253244957
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 4.676536041643516661
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.2424185434072171907
+swTranslation(1) = -0.04785200212905688782
+swTranslation(2) = 0.1917082065365355581
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+boolstatus = Part.Extension.SelectByRay(0.02984595475498963424, 0.0007609814775264567288, 0.0206943125897396385, -0.4744021723432003679, -0.7644298669775684285, 0.4365656392213082548, 0.0002049172429185167532, 2, True, 1, 0)
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 5.634380773064478376
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.2693447993015325448
+swTranslation(1) = -0.07575210266264678638
+swTranslation(2) = 0.2309737428151031058
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 6.788410569957203045
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.3017860714633582853
+swTranslation(1) = -0.1093666816187792296
+swTranslation(2) = 0.2782816178495218229
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 8.17880791561108822
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.3408719415378471118
+swTranslation(1) = -0.1498661743370109656
+swTranslation(2) = 0.3352790576500263575
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 6.815673263009240479
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.301675812900338236
+swTranslation(1) = -0.1248884786141758602
+swTranslation(2) = 0.2793992147083552702
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 5.679727719174366918
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.2690123723690808211
+swTranslation(1) = -0.1040737321784798719
+swTranslation(2) = 0.2328326789236293826
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 4.733106432645305617
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.2417928385930329382
+swTranslation(1) = -0.08672811014873320345
+swTranslation(2) = 0.1940272324363578327
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.944255360537754829
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.2191098937796597257
+swTranslation(1) = -0.07227342512394435703
+swTranslation(2) = 0.1616893603636315457
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 3.286879467114795617
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.200207439768515405
+swTranslation(1) = -0.06022785426995357766
+swTranslation(2) = 0.1347411336363596168
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.73906622259566257
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1844553947592284804
+swTranslation(1) = -0.05018987855829465383
+swTranslation(2) = 0.1122842780302996807
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 2.282555185496386141
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1713286905848227237
+swTranslation(1) = -0.04182489879857888282
+swTranslation(2) = 0.09357023169191640288
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.902129321246988525
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1603897704394845192
+swTranslation(1) = -0.03485408233214908058
+swTranslation(2) = 0.07797519307659700472
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.585107767705823845
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.1512740036517027098
+swTranslation(1) = -0.02904506861012424307
+swTranslation(2) = 0.06497932756383083264
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(-0.0008393745042667433154, 0.005999999999971805664, 0.02162764971279784731, -0.4744021723432003679, -0.7644298669775684285, 0.4365656392213082548, 0.0006045663844355801154, 2, False, 0, 0)
+Part.OpenCompFile
+
+' Open
+Set Part = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\base.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActivateDoc2 "base.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+swApp.ActivateDoc2 "part1.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+boolstatus = Part.Extension.SelectByID2("Plane2", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Extrusion2", "BODYFEATURE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Extrusion3", "BODYFEATURE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+swApp.ActivateDoc2 "base.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(-0.0248104059945148947, 0.006000000000028649083, 0.08130573360193693588, -0.4744021723432003679, -0.7644298669775684285, 0.4365656392213082548, 0.0006126266039748584202, 2, False, 0, 0)
+
+' Named View
+Part.ShowNamedView2 "*Top", 5
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(-0.009685153593430140262, 0.005999999999971805664, 0.06128223267003745506, 0, -1, 0, 0.0004883033917529833959, 2, False, 0, 0)
+
+' Redraw
+Part.GraphicsRedraw2
+Set Part = swApp.NewDocument("C:\ProgramData\SolidWorks\SOLIDWORKS 2019\templates\Drawing.drwdot", 0, 0, 0)
+swApp.ActivateDoc2 "Draw1 - Sheet1", False, longstatus
+Set Part = swApp.ActiveDoc
+swApp.ActivateDoc2 "base.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+
+' New View
+Part.NameView "*Current"
+Dim myView As Object
+Set myView = Part.CreateDrawViewFromModelView3("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\base.SLDPRT", "*Current", 0, 0, 0)
+boolstatus = Part.DeleteNamedView(*Current)
+Part.ClearSelection2 True
+swApp.ActivateDoc2 "Assem1.SLDASM", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ViewRotateplusx
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+boolstatus = Part.Extension.SelectByRay(-0.007724051490608729864, 0.005999999999971805664, 0.03335246635401745152, 0.0253507053380104784, -0.7056124920944621959, 0.7081443022005527999, 0.0006045663844355801154, 2, False, 0, 0)
+Part.OpenCompFile
+
+' Open
+Set Part = swApp.OpenDoc6("Z:\ASU\semester7\MCT 381 (Design of Mechatronics Systems 1)\Project\Cartesian Robot Storing\new m\base.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActivateDoc2 "base.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditSketch
+Part.ClearSelection2 True
+
+' Named View
+Part.ShowNamedView2 "*Top", 5
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("D6@Sketch1@base.SLDPRT", "DIMENSION", 0.01621623482357700818, 0.003000000026077005635, 0.05041142084953827152, False, 0, Nothing, 0)
+Part.SketchManager.InsertSketch True
+' MSGBOX
+' Save changes to base.SLDPRT?
+
+
+' Save
+Dim swErrors As Long
+Dim swWarnings As Long
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+
+' Close Document
+swPart = Nothing
+Set Part = Nothing
+swApp.CloseDoc "base.SLDPRT"
+swApp.ActivateDoc2 "Assem1.SLDASM", False, longstatus
+Set Part = swApp.ActiveDoc
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+
+' Close Document
+Set swAssembly = Nothing
+Set Part = Nothing
+swApp.CloseDoc "Assem1.SLDASM"
+swApp.ActivateDoc2 "part1.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SketchBoxSelect("0.000000", "0.000000", "0.000000", "0.000000", "0.000000", "0.000000")
+
+' Close Document
+swPart = Nothing
+Set Part = Nothing
+swApp.CloseDoc "part1.SLDPRT"
+swApp.ExitApp
+End Sub
